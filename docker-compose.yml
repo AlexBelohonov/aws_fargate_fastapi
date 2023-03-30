@@ -1,0 +1,13 @@
+
+services:
+  web:
+    image: 1891/fastapi:latest
+    volumes:
+      - type: bind
+        source: ./app
+        target: /app
+    ports:
+      - '80:80'
+
+volumes:
+  app:
